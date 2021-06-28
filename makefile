@@ -1,10 +1,10 @@
 CC = gcc
 CFILES = *.c
 HFILES = *.h
-MAIN = pruebas.c
-OBJETOS = abb.o abb_minipruebas.o
+MAIN = juego.c
+OBJETOS = animos.o archivos.o comandos.o defendiendo_torres.o graficos.o utiles.o
 FILES = Enunciado README.md makefile MAKEFILE.md
-EXEC = abb
+EXEC = defendiendo
 CFLAGS =  -g -std=c99 -Wall -Wconversion -Wtype-limits -pedantic -Werror -O0
 GFLAGS = --tui
 VFLAGS = --leak-check=full --track-origins=yes --show-reachable=yes 
@@ -29,4 +29,4 @@ zip:
 
 .PHONY: clean
 clean:
-	rm -f *.o $(EXEC)
+	rm -f $(EXEC)

@@ -89,17 +89,17 @@ void pregunta_pos_agregar_def(coordenada_t *posicion){
 
 //Pre: Que se pueda agregar un defensor extra
 //Post: Devuelve un tipo de defensor valido
-char preguntar_tipo_defensor(){
+char preguntar_tipo_defensor(juego_t defendiendo_torres){
 	char tipo;
 
 	system("clear");
-	mostrar_juego(*defendiendo_torres);
+	mostrar_juego(defendiendo_torres);
 	printf("De que tipo de defensor desea agregar Enano(G) o Elfo(L): ");
 	scanf(" %c", &tipo);
 
 	while( tipo != ENANO && tipo != ELFO){
 		system("clear");
-		mostrar_juego(*defendiendo_torres);
+		mostrar_juego(defendiendo_torres);
 		printf("\n   Parece que ingreso un caracter incorrecto");
 		printf("\n   De que tipo de defensor desea agregar Enano(G) o Elfo(L): ");
 		scanf(" %c", &tipo);
@@ -142,7 +142,7 @@ void colocar_defensor(juego_t* defendiendo_torres, char tipo,int enanos_por_agre
 			printf("\n\n  La posicion fila = %i, columna = %i es invalida, ingrese nuevas coordenada",posicion.fil,posicion.col);
 			printf("\n  Recuerde que un defensor debe ser colocado al lado de un camino(pero no sobre el)\n  y no puede estar un defensor en esa posicion\n");
 		}
-		pregunta_posicion(&posicion);
+		pregunta_pos_agregar_def(&posicion);
 		i++;
 	}while(agregar_defensor( &((*defendiendo_torres).nivel), posicion, tipo) == NO_SE_PUDO_AGREGAR);
 }
@@ -315,8 +315,6 @@ void inicializar_nivel(juego_t* defendiendo_torres,camino_nivel_t caminos_nivel[
 * ->Agrega todos los defensores del nivel
 */
 void agregar_defensa_inicial(juego_t* defendiendo_torres, configuracion_t configuracion){
-	int i = 0;
-	coordenada_t posicion;
 	int enanos_por_agregar = configuracion.enanos_nivel[defendiendo_torres->nivel_actual]; 
 	int elfos_por_agregar = configuracion.elfos_nivel[defendiendo_torres->nivel_actual];
 
@@ -437,7 +435,7 @@ int orcos_muertos_nivel(enemigo_t enemigos[MAX_ENEMIGOS],int tope_enemigos){
 int orcos_muertos_total(juego_t defendiendo_torres, int estado_juego){
 	int suma = 0;
 	
-	for(int i = 0; i<defendiendo_torres.nivel_actual;i++){
+	for(int i = 0; i<=defendiendo_torres.nivel_actual;i++){
 		suma+=MAX_ENEMIGOS_NIVEL[i];
 	}
 	if(estado_juego == PERDIO){
