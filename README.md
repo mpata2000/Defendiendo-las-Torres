@@ -12,7 +12,25 @@ Es una conjunto de tps que se fueron agregando cosas al programa
 
 ## Objetivos
 
+### TP1
+
+El presente trabajo práctico tiene como objetivo evaluar a los alumnos en aspectos fundamentales de la programación.
+
+Por un lado se evaluará la validación de datos ingresados por el usuario, y la comunicación con este último a la hora de informar errores en dichos ingresos, así como también el correcto uso de estructuras de control, tipos de dato simples y modularización.
+
+Por otro, se requiere que el trabajo cumpla con las buenas prácticas de programación profesadas por la cátedra.
+
+### TP2
+
+El presente trabajo práctico tiene como objetivo que el alumno:
+
+- Diseñe y desarrolle las funcionalidades de una biblioteca con un contrato preestablecido.
+- Se familiarice con y utilice correctamente los tipos de datos estructurados.
+- Desarrolle una interfaz gráfica amigable y entendible para el usuario
+
 ### TP3
+
+El presente trabajo práctico tiene como objetivo que el alumno:
 
 - Se familiarice con el manejo de archivos en C.
 - Utilice las funciones acordes al tipo de archivo y/o forma de acceso.
@@ -125,6 +143,14 @@ Un ejemplo de este comando es:
 - Ambos parámetros son opcionales.
   - Si el archivo de configuración no existe o no fue ingresado, debe utilizarse la configuración por defecto.
   - Si el archivo de grabación ya existe, se sobreescribirá, si el parámetro grabación no fue ingresado, la partida no se grabará.
+
+### Comandos con Make
+
+Se le asigna a arg_1, arg_2 los comandos
+
+```make
+ make arg_1=jugar arg_2=config=mi_configuracion.txt arg_3=grabacion=mi_partida.dat
+```
 
 ## Compilado
 
