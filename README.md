@@ -4,6 +4,26 @@
 
 Es una conjunto de tps que se fueron agregando cosas al programa
 
+- [Defendiendo-las-Torres](#defendiendo-las-torres)
+  - [Enunciados](#enunciados)
+  - [Objetivos](#objetivos)
+    - [TP1](#tp1)
+    - [TP2](#tp2)
+    - [TP3](#tp3)
+  - [**Comandos**](#comandos)
+    - [**Mostrar Ranking**](#mostrar-ranking)
+      - [**Comando: ranking**](#comando-ranking)
+    - [**Crear Camino**](#crear-camino)
+      - [**Comando: crear_camino**](#comando-crear_camino)
+    - [**Crear Configuracion**](#crear-configuracion)
+      - [**Comando: crear_configuracion**](#comando-crear_configuracion)
+    - [**Ver Partida Grabada**](#ver-partida-grabada)
+      - [**Comando: poneme_la_repe**](#comando-poneme_la_repe)
+    - [**Jugar Partida**](#jugar-partida)
+      - [**Comando: jugar**](#comando-jugar)
+    - [Comandos con Make](#comandos-con-make)
+  - [Compilado](#compilado)
+
 ## Enunciados
 
 - [TP1](2020_1C_TP1)
